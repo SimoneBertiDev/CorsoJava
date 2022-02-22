@@ -6,7 +6,7 @@ public class Persona {
     private int id;
     private String nome;
     private String cognome;
-    
+
     public void cammina() {
         /*TODO*/
     }
