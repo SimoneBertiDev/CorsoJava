@@ -46,7 +46,7 @@ public class CorsoJava {
         /*ifElseSwitcCase condizionali = new ifElseSwitcCase();
         System.out.println(condizionali.recuperaIlMaggore(55,55,4));*/
 
-        System.out.println("hellos");
+//        System.out.println("hellos");
         /*Variabile locale*/
         int a = 10;
         CorsoJava c = new CorsoJava(); /*Due in uno Dichiarazione + Inizializzazione Molto Easy se si sa già ma è giusto per ripassare un po di nozioni*/
