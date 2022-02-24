@@ -36,6 +36,8 @@ public class ForWhileDoWhile {
         if(val != null){
             for (int i: val) {
                 System.out.println(i);
+                //break;//Esce dal ciclo for e prosegue nel codice
+                //continue;//Va avanti di un interazione saltando il codice racchiuso del il ciclo for.
             }
         }
     }
