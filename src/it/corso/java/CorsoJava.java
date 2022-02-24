@@ -3,6 +3,8 @@ package it.corso.java;
 //import Corso.lezione.Calcolatore.Calcolatrice;
 
 import Corso.lezione.Calcolatore.Calcolatrice;
+import it.corso.java.ciclo.ForWhileDoWhile;
+import it.corso.java.condizionali.ifElseSwitcCase;
 
 import java.io.File;
 
@@ -20,6 +22,30 @@ public class CorsoJava {
     }
 
     public static void main(String[] args) {
+
+        ForWhileDoWhile ciclo = new ForWhileDoWhile();
+        ciclo.itera(0,5);
+        ciclo.iteraDoWhile(0,0);
+
+        String[] arr = new String[]{"simone","berti"};
+        ciclo.iteraFor(arr);
+
+        int[] arri = new int[]{1,2,3,4,5,6,7,8,9,10};
+        ciclo.iteraFor(arri);
+
+
+
+        //Implementiamo il singleton
+        ifElseSwitcCase.getInstance().isNull("test");
+        ifElseSwitcCase.getInstance().recuperaIlMaggore(44,55,77);//NON RICREARA L'ISTANZA PERCHè E GIà STATA CREATA IN PRECEDENZA.
+        ifElseSwitcCase.getInstance().recuperaTest(4);
+
+
+
+
+        /*ifElseSwitcCase condizionali = new ifElseSwitcCase();
+        System.out.println(condizionali.recuperaIlMaggore(55,55,4));*/
+
         System.out.println("hellos");
         /*Variabile locale*/
         int a = 10;
