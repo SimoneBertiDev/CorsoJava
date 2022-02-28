@@ -31,6 +31,7 @@ public class Smartphone extends ProdottoElettronico{
 
     @Override
     public void stampaProdotto() {
-        System.out.println(getId() + " " + getModello() + " " +getMarca() + " " +getCpu() + " " + getRam() + " " + getPrezzo() );
+        super.stampaProdotto();
+        System.out.println(getId() + " " + getModello() + " " +getMarca() + " " +getCpu() + " " + getRam() + " " + getPrezzo()+ );
     }
 }
