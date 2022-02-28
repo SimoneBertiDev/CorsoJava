@@ -25,5 +25,15 @@ public class Main {
 //        p.azienda = "pippo";
 
         //instanceof ritorna true se il valore object è non null ed è di tipo TypeClass, altrimenti ritorna false.
+
+        /*Il metodo getClass()
+        Il metodo getClass() ritorna un oggetto di tipo java.lang.Class, che consente di acquisire informazioni di runtime sulle classi e sulle interfacce disponibili nella JVM.
+
+        Un oggetto di tipo Class consente di accedere ad una serie di informazioni sulla classe, ad esempio:
+
+        il nome della classe
+        i metodi della classe
+        il nome del package
+        i nomi delle interfacce che implementa la classe*/
     }
 }
