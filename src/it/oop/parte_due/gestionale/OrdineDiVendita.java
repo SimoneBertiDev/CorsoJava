@@ -11,9 +11,9 @@ public class OrdineDiVendita {
     private List<RigaOrdine> righeOrdine;
 
     public static final String STATO_IN_ATTESA = "STATO_IN_ATTESA";
-
     public static final String STATO_SPEDITO = "STATO_SPEDITO";
     public static final String STATO_CONSEGNATO = "STATO_CONSEGNATO";
+    
     public long getId() {
         return id;
     }
