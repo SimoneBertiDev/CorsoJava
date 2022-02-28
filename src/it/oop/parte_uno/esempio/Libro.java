@@ -18,8 +18,8 @@ public class Libro extends Prodotto{
     public List<String> getSores() {
         ArrayList<String> tmp = new ArrayList<String>();
 
-        tmp.add("libreria 1");
-        tmp.add("Libreria 2");
+        tmp.add("negozio 1");
+        tmp.add("negozio 2");
 
         return tmp;
     }
