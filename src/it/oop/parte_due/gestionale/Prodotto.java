@@ -5,7 +5,7 @@ public class Prodotto {
     private String nome;
     private String descrizione;
     private double prezzo;
-    private Categoria categoriaMerceologica;
+    private Categoria categoriaMerceologica;//Aggregazione
 
     public long getId() {
         return id;
