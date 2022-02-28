@@ -46,6 +46,6 @@ public class Televisore extends Prodotto{
                 temp2.add(string);
             }
        }
-        return tmp2;
+        return temp2;
     }
 }
