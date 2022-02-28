@@ -6,6 +6,7 @@ import java.util.List;
 public class Libro extends Prodotto{
     private String autore;
 
+
     public String getAutore() {
         return autore;
     }

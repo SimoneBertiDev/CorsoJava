@@ -21,5 +21,9 @@ public class Main {
         System.out.println(li);
         System.out.println(s);
         System.out.println(pr);
+
+//        p.azienda = "pippo";
+
+        //instanceof ritorna true se il valore object è non null ed è di tipo TypeClass, altrimenti ritorna false.
     }
 }

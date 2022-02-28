@@ -6,6 +6,8 @@ import java.util.List;
 public class Smartphone extends Prodotto{
     private String imei;
 
+
+
     public String getImei() {
         return imei;
     }

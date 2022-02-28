@@ -8,6 +8,23 @@ public class Prodotto {
     private String name;
     private String descrizione;
     private double prezzo;
+    //public String azienda; //Non c'è bisogno di creare i get e i set di questa varibile dal momento in cui e gia accessibile
+    //solo le costanti possono essere dichiarate di tipo pubblico perché sono inmutabili.
+    public static final String TIPO_PRODOTTO = "GENERICO";
+
+
+    //Costruttore default anche se non lo dichiariamo e gia dichiarato automaticamente cioe non serve specificarlo
+    public Prodotto(){
+        super();
+    }
+
+    public Prodotto(int id, String name, double prezzo) {
+        super();
+        //si come bisogna elaborare il dato non basta dire che questo e uguale a questo ma bisogna far lavorare il metodo
+        setName(name);
+        setId(id);
+        setPrezzo(prezzo);
+    }
 
     public int getId() {
         return id;
@@ -22,7 +39,8 @@ public class Prodotto {
     }
 
     public void setName(String name) {
-        this.name = name;
+        String tmp = name.concat("...");
+        this.name = tmp;
     }
 
     public String getDescrizione() {
@@ -38,6 +56,9 @@ public class Prodotto {
     }
 
     public void setPrezzo(double prezzo) {
+        if(prezzo == 0){
+            prezzo = 1;
+        }
         this.prezzo = prezzo;
     }
     public List<String> getSores(){
