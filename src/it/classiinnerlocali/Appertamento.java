@@ -56,7 +56,8 @@ public class Appertamento {
     }
 
     //classe Inner dentro appartamento che non è come la classe standard (StanzaStandard)
-    class StanzaInner{
+    //Per istanziare una classe al di fuori della classe stessa bisogna renderla static
+    /* static */class StanzaInner{
         private double mq;
         private String accessori;
 
