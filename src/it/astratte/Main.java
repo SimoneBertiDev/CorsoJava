@@ -6,6 +6,6 @@ public class Main {
 
         Lavatrice l = new Lavatrice();
 
-        l.
+
     }
 }
