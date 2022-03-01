@@ -4,7 +4,13 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.Serial;
 
-public class JavaExec extends Throwable{
+
+//Gerarchia ERRORI/ECCEZIONI
+//          Throwable
+//     Error        Exception
+//      JMV           Fase di esecuzione(nulpointer)...
+
+public class JavaExec extends Exception{
     @Serial
     private static final long serialVersionUID = 5879087740116594416L;
 
