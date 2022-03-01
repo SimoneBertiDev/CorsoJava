@@ -1,20 +1,47 @@
 package it.liste;
 
+import com.sun.source.tree.UsesTree;
 import it.oop.parte_due.gestionale.Smartphone;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Main m = new Main();
         //m.creaArray();
         //m.arrayMultidimensionale();
-
-        m.esempioArrayList();
+        //m.esempioArrayList();
+        m.esempioHashMap();
     }
 
-    public void 
+    public void esempioHashMap(){
+        Map<String, Smartphone> mappa = new HashMap<String, Smartphone>();
+        //HashMap<String, Smartphone> mappa2 = new HashMap<String, Smartphone>();
+
+        Smartphone sm1 = new Smartphone();
+        sm1.setMarca("Apple");
+        sm1.setModello("iphone1");
+
+        Smartphone sm2 = new Smartphone();
+        sm2.setMarca("Samsung");
+        sm2.setModello("A20");
+        //Aggiungere valori alla mappa
+        mappa.put(sm1.getModello(), sm1);
+        mappa.put(sm2.getModello(), sm2);
+
+        Smartphone s = mappa.get("iphone1");
+        System.out.println(s.getMarca() + " " + s.getModello());
+
+        Set<String> chiavi = mappa.keySet();
+
+        System.out.println("-----");
+        for (String key :
+                chiavi) {
+            System.out.println(key);
+        }
+        System.out.println("-----");
+
+    }
 
     public void esempioArrayList(){
         List<String> list = new ArrayList<String>();
