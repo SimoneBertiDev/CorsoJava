@@ -2,13 +2,90 @@ package it.liste;
 
 import it.oop.parte_due.gestionale.Smartphone;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Main m = new Main();
-        m.creaArray();
+        //m.creaArray();
+        //m.arrayMultidimensionale();
 
-        m.arrayMultidimensionale();
+        m.esempioArrayList();
     }
+    
+
+    public void esempioArrayList(){
+        List<String> list = new ArrayList<String>();
+        //ArrayList<String> list1 = new ArrayList<String>();
+        System.out.println(list.isEmpty());
+        list.add("mario");
+        list.add("mario1");
+        list.add("mario2");
+        list.add("mario3");
+        list.add("mario4");
+
+        list.add(2,"mario5" );
+        for (String nome: list) {
+            System.out.println(nome);
+        }
+        System.out.println(list.size());
+
+        System.out.println("-------");
+        list.remove(2);
+        for (String nome: list) {
+            System.out.println(nome);
+        }
+        System.out.println(list.size());
+
+        System.out.println("-------");
+        list.set(2,"modifico un valore");
+        for (String nome: list) {
+            System.out.println(nome);
+        }
+        System.out.println(list.size());
+        System.out.println(list.isEmpty());
+        System.out.println("");
+
+        System.out.println("restisuisco la posizione di dove si trova questo carattere mario -> "+list.indexOf("mario"));
+        System.out.println("-------");
+        System.out.println(list.toString());
+        System.out.println("-------");
+        System.out.println("converto la lista in un array di stringhe");
+        //String[] listaToArrayCast = (String[]) list.toArray();//non garantisce la corretta conversione
+        String[] listaToArrayIsta =  list.toArray(new String[list.size()]);
+
+        for (String l : listaToArrayIsta) {
+            System.out.println(l);
+        }
+
+        System.out.println("");
+        list.clear();
+        System.out.println(list.size());
+        System.out.println(list.isEmpty());
+        System.out.println("");
+
+
+        List<Smartphone> sm = new ArrayList<Smartphone>();
+        Smartphone sm1 = new Smartphone();
+        sm1.setMarca("Apple");
+        sm1.setModello("iphone1");
+
+        Smartphone sm2 = new Smartphone();
+        sm2.setMarca("Samsung");
+        sm2.setModello("A20");
+
+        sm.add(sm1);
+        sm.add(sm2);
+
+        for (Smartphone smart: sm) {
+            System.out.println(smart.getMarca() + " " + smart.getModello());
+        }
+        System.out.println(sm.toString());
+
+    }
+
+
     public void arrayMultidimensionale(){
         int[][] matrice =  new int[10][10];
 
