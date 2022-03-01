@@ -13,7 +13,8 @@ public class Main {
 
         m.esempioArrayList();
     }
-    
+
+    public void 
 
     public void esempioArrayList(){
         List<String> list = new ArrayList<String>();
