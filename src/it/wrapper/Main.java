@@ -12,8 +12,14 @@ public class Main {
 
         /*boxing*/
         Double d1 = new Double(10);
+
+        double d2 = 90.451;
+
+        Double d3 = new Double(d2);
         /*autoboxing*/
+        Double d4 = 3.44;//crea in automatico l'istanza
 
         /*unboxing*/
+        double d5 = d4;
     }
 }
