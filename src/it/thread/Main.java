@@ -1,13 +1,29 @@
 package it.thread;
 
+import it.thread.concorrenza.GetSitePage;
+
 public class Main {
     public static void main(String[] args) {
-//        EsempioThread thread = new EsempioThread();
-//        thread.start();
-//
-//        EsempioRunnable esempioRunnable = new EsempioRunnable();
-//        Thread t1 = new Thread(esempioRunnable);
-//        t1.start();
+
+    }
+
+
+    private void esempioConcorrenzaThread(){
+        GetSitePage s1 = new GetSitePage();
+    }
+
+    private void thread() {
+        EsempioThread thread = new EsempioThread();
+        thread.start();
+
+        EsempioRunnable esempioRunnable = new EsempioRunnable();
+        Thread t1 = new Thread(esempioRunnable);
+        t1.start();
+    }
+
+
+    private void esempioMultiTasking() {
+
 
         EsempioThread thread = new EsempioThread();
         thread.setName("EsempioClass");
