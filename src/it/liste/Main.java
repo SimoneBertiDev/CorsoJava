@@ -12,7 +12,36 @@ public class Main {
         //m.arrayMultidimensionale();
         //m.esempioArrayList();
         //m.esempioHashMap();
-        m.getConfig();
+        //m.getConfig();
+        //m.esempioIterazione();
+        m.esempioHashMap();
+    }
+
+    public void esempioIterazione(){
+        List<String> list = new ArrayList<String>();
+        System.out.println(list.isEmpty());
+        list.add("mario");
+        list.add("mario1");
+        list.add("mario2");
+        list.add("mario3");
+        list.add("mario4");
+
+        System.out.println("---------for");
+        /*Metodo uno for/foreach*/
+        for (int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));//in c# e come gli array list[i]
+        }
+        System.out.println("---------foreach");
+        for (String lita : list) {
+            System.out.println(lita);
+        }
+        System.out.println("---------Iterator");
+        /*Metodo iterator*/
+        Iterator<String> s = list.iterator();
+
+        while (s.hasNext()){
+            System.out.println(s.next());
+        }
     }
 
     public void getConfig() {
@@ -67,6 +96,14 @@ public class Main {
                 mappa.values()) {
             System.out.println(k.getMarca());
         }
+
+        Iterator<String> key = mappa.keySet().iterator();
+
+        while (key.hasNext()){
+            System.out.println(key.next());
+        }
+
+
     }
 
     public void esempioArrayList() {
