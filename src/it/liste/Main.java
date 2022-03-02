@@ -1,8 +1,8 @@
 package it.liste;
 
-import com.sun.source.tree.UsesTree;
 import it.oop.parte_due.gestionale.Smartphone;
 
+import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -11,10 +11,28 @@ public class Main {
         //m.creaArray();
         //m.arrayMultidimensionale();
         //m.esempioArrayList();
-        m.esempioHashMap();
+        //m.esempioHashMap();
+        m.getConfig();
     }
 
-    public void esempioHashMap(){
+    public void getConfig() {
+        Properties properties = new Properties();
+
+        try {
+            InputStream s = new FileInputStream(new File("C:\\Users\\simone.berti\\eclipse-workspace\\CorsoJava\\config.properties"));
+            properties.load(s);
+            String nameDb = properties.getProperty("db-name");
+            System.out.println(nameDb);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void esempioHashMap() {
         Map<String, Smartphone> mappa = new HashMap<String, Smartphone>();
         //HashMap<String, Smartphone> mappa2 = new HashMap<String, Smartphone>();
 
@@ -39,11 +57,19 @@ public class Main {
                 chiavi) {
             System.out.println(key);
         }
+
+
         System.out.println("-----");
 
+        System.out.println(mappa.values());
+
+        for (var k :
+                mappa.values()) {
+            System.out.println(k.getMarca());
+        }
     }
 
-    public void esempioArrayList(){
+    public void esempioArrayList() {
         List<String> list = new ArrayList<String>();
         //ArrayList<String> list1 = new ArrayList<String>();
         System.out.println(list.isEmpty());
@@ -53,45 +79,45 @@ public class Main {
         list.add("mario3");
         list.add("mario4");
 
-        list.add(2,"mario5" );
-        for (String nome: list) {
+        list.add(2, "mario5");
+        for (String nome : list) {
             System.out.println(nome);
         }
         System.out.println(list.size());
 
         System.out.println("-------");
         list.remove(2);
-        for (String nome: list) {
+        for (String nome : list) {
             System.out.println(nome);
         }
         System.out.println(list.size());
 
         System.out.println("-------");
-        list.set(2,"modifico un valore");
-        for (String nome: list) {
+        list.set(2, "modifico un valore");
+        for (String nome : list) {
             System.out.println(nome);
         }
         System.out.println(list.size());
         System.out.println(list.isEmpty());
-        System.out.println("");
+        System.out.println();
 
-        System.out.println("restisuisco la posizione di dove si trova questo carattere mario -> "+list.indexOf("mario"));
+        System.out.println("restisuisco la posizione di dove si trova questo carattere mario -> " + list.indexOf("mario"));
         System.out.println("-------");
-        System.out.println(list.toString());
+        System.out.println(list);
         System.out.println("-------");
         System.out.println("converto la lista in un array di stringhe");
         //String[] listaToArrayCast = (String[]) list.toArray();//non garantisce la corretta conversione
-        String[] listaToArrayIsta =  list.toArray(new String[list.size()]);
+        String[] listaToArrayIsta = list.toArray(new String[list.size()]);
 
         for (String l : listaToArrayIsta) {
             System.out.println(l);
         }
 
-        System.out.println("");
+        System.out.println();
         list.clear();
         System.out.println(list.size());
         System.out.println(list.isEmpty());
-        System.out.println("");
+        System.out.println();
 
 
         List<Smartphone> sm = new ArrayList<Smartphone>();
@@ -106,30 +132,30 @@ public class Main {
         sm.add(sm1);
         sm.add(sm2);
 
-        for (Smartphone smart: sm) {
+        for (Smartphone smart : sm) {
             System.out.println(smart.getMarca() + " " + smart.getModello());
         }
-        System.out.println(sm.toString());
+        System.out.println(sm);
 
     }
 
 
-    public void arrayMultidimensionale(){
-        int[][] matrice =  new int[10][10];
+    public void arrayMultidimensionale() {
+        int[][] matrice = new int[10][10];
 
-        for (int i = 0; i < matrice.length; i++){
-            for (int j = 0; j < matrice[i].length; j++){
-                matrice[i][j] = i+j;
+        for (int i = 0; i < matrice.length; i++) {
+            for (int j = 0; j < matrice[i].length; j++) {
+                matrice[i][j] = i + j;
             }
         }
 
-        for (int i = 0; i < matrice.length; i++){
+        for (int i = 0; i < matrice.length; i++) {
             int contatore = matrice[i].length;
-            for (int j = 0; j < matrice[i].length; j++){
+            for (int j = 0; j < matrice[i].length; j++) {
 
-                if(contatore == 1) {
-                    System.out.println("");
-                }else {
+                if (contatore == 1) {
+                    System.out.println();
+                } else {
                     contatore--;
                     System.out.print(matrice[i][j] + " ");
                 }
@@ -138,10 +164,10 @@ public class Main {
         }
     }
 
-    public void creaArray(){
+    public void creaArray() {
         int[] test;
 
-        test= new int[5];
+        test = new int[5];
 
         int[] numeri = new int[10];
 
@@ -150,8 +176,8 @@ public class Main {
         numeri[2] = 10;
         numeri[3] = 10;
 
-        for (int i = 0; i < numeri.length; i++){
-            numeri[i] = 10+i;
+        for (int i = 0; i < numeri.length; i++) {
+            numeri[i] = 10 + i;
         }
 
         for (int numero : numeri) {
@@ -172,7 +198,7 @@ public class Main {
 
         for (Smartphone p :
                 prodotti) {
-         System.out.println(p.getMarca() + " " + p.getPrezzo());
+            System.out.println(p.getMarca() + " " + p.getPrezzo());
         }
 
 
