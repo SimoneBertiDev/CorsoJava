@@ -9,5 +9,11 @@ public class Main {
         System.out.println(a1.intValue());
 
         String s = new String("simone");
+
+        /*boxing*/
+        Double d1 = new Double(10);
+        /*autoboxing*/
+
+        /*unboxing*/
     }
 }
