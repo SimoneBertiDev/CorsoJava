@@ -8,7 +8,7 @@ public class ClienteNonSync extends Thread {
         this.setName(nomeCliente);
         this.sommaDaPrelevare = sommaDaPrelevare;
     }
-    
+
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName() + " arriva al bancomat");
