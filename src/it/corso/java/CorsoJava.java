@@ -2,7 +2,7 @@ package it.corso.java;
 
 //import Corso.lezione.Calcolatore.Calcolatrice;
 
-import Corso.lezione.Calcolatore.Calcolatrice;
+//import Corso.lezione.Calcolatore.Calcolatrice;
 import it.corso.java.ciclo.ForWhileDoWhile;
 import it.corso.java.condizionali.ifElseSwitcCase;
 
@@ -65,13 +65,13 @@ public class CorsoJava {
         float f = 100.45f;
         float g = -10.30f;
 
-        Calcolatrice cal = new Calcolatrice();
-        System.out.println(cal.somma(f,g));
-
-        double ddou = 100.45;
-        double doun = -10.30;
-
-        System.out.println(cal.somma(ddou,doun));
+//        Calcolatrice cal = new Calcolatrice();
+//        System.out.println(cal.somma(f,g));
+//
+//        double ddou = 100.45;
+//        double doun = -10.30;
+//
+//        System.out.println(cal.somma(ddou,doun));
 
         char ch = 'a';
         char chf = 'b';
